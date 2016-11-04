@@ -11,13 +11,13 @@ def p(x):
 
 for i in range(1,N-1):
     U = np.random.random()*2*delta -delta
-    x_new = x[i-1]+U
-    alpha = min(1,p(x_new)/p(x[i-1]))
+    x_new = x[-1]+U
+    alpha = min(1,p(x_new)/p(x[-1]))
     u = np.random.random()
-    if(u<alpha):
+    if(u<=alpha):
         x = np.append(x,[x_new])
     else:
-        x = np.append(x,[x[i-1]])
+        x = np.append(x,[x[-1]])
 
 plt.hist(x,bins=50)
 plt.show()
