@@ -1,0 +1,8 @@
+import numpy as np
+
+N = 10000
+delta = 0.1
+x_0 = 0
+
+def p(x):
+    return np.exp(-x**2/2.)/(2*np.pi)**0.5
